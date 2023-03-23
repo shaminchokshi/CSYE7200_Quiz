@@ -4,6 +4,9 @@ import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import scala.util.Random
 
+/**
+ * Your task is to get the following tests to run green by implementing the appropriate sections of code in Table.
+ */
 class TableSpec extends AnyFlatSpec with Matchers {
 
   behavior of "Table"
@@ -35,5 +38,9 @@ class TableSpec extends AnyFlatSpec with Matchers {
     val result = table.filter(x => x.startsWith("A"))
     result.size shouldBe 2
     result shouldBe Table("ABC", "ABA")
+  }
+
+  it should "calculate sum" in {
+    table.sum shouldBe 2036
   }
 }
